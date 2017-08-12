@@ -1,4 +1,4 @@
-eor# PostgreSQL. Versions 9.1 and up are supported.
+#eor# PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
@@ -23,7 +23,12 @@ default: &default
 
 development:
   <<: *default
+  adapter: postgresql
+  encoding: utf8
   database: eor_development
+  pool: 5
+  username: josevasquez
+  password:
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
